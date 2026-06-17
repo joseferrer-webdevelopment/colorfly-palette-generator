@@ -1,0 +1,32 @@
+/* ===== Reset CSS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Variables css ===== */
+:root {
+    --color-primary: hsl(315, 85%, 55%);
+    --color-primary-light: hsl(315, 85%, 85%);
+    --color-primary-dark: hsl(315, 85%, 25%);
+    --color-accent: hsl(35, 90%, 55%);
+
+    --color-background: hsl(0, 30%, 80%);
+    --color-border: hsl(0, 30%, 90%);
+    --color-text: hsl(0, 0%, 15%);
+    --color-text-sauve: hsl(0, 0%, 35%);
+}
+
+/* ==== Base CSS ==== */
+
+body {
+    font-family: "Bangers", sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 2rem;
+}
