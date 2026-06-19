@@ -32,8 +32,7 @@ function colorRandom() {
     swatches.forEach(function(swatch) {
         const color = generarColorFinal();
         swatch.style.backgroundColor = color.hsl;
-        swatch.querySelector(".swatch__hex")
-        .textContent = color.hex;
+        swatch.querySelector(".swatch__hex").textContent = color.hex;
     });
 }
 // 4. Al cargar la página, pintar la paleta inicial
@@ -51,3 +50,16 @@ if (boton) {
 } 
 
 // 6. Al hacer clic en el ícono de copiar, copiar HEX al portapapeles
+
+const copys = document.querySelectorAll(".swatch__copy");
+
+function activarCopiar() {
+    copys.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            const copyHex = btn.parentElement.parentElement.querySelector(".swatch__hex").textContent;
+            navigator.clipboard.writeText(copyHex);
+        });
+    });
+}
+
+activarCopiar();
