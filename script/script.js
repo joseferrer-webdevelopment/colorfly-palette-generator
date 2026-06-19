@@ -60,7 +60,7 @@ function colorRandom() {
 
         const hex = document.createElement("span");
         hex.className = "swatch__hex";
-        hex.textContent = color.hex
+        hex.textContent = color.hex;
 
         const boton = document.createElement("button");
         boton.className = "swatch__copy"
@@ -73,8 +73,14 @@ function colorRandom() {
         // Al hacer clic en el ícono de copiar, copiar HEX al portapapeles
 
         boton.addEventListener("click", function() {
-            navigator.clipboard.writeText(color.hex)
-        });
+            navigator.clipboard.writeText(color.hex);
+
+        
+            hex.textContent = "¡Copiado!";
+            setTimeout(function () {
+                hex.textContent = color.hex;
+            }, 1000);
+            });
 
 
         // Unir los elementos
