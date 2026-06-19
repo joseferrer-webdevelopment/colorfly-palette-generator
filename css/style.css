@@ -90,7 +90,6 @@ main {
 .swatches {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     gap: 0;
     background-color: var(--color-background);
