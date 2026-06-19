@@ -3,13 +3,13 @@ function hslToHex(h, s, l) {
     l = l / 100;
     const a = (s * Math.min(l, 1 - l)) / 100;
     const f = function (n) {
-    const k = (n + h / 30) % 12;
-    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-    return Math.round(255 * color)
-    .toString(16)
-    .padStart(2, "0");
-};
-return "#" + f(0) + f(8) + f(4);
+        const k = (n + h / 30) % 12;
+        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+        return Math.round(255 * color)
+            .toString(16)
+            .padStart(2, "0");
+    };
+    return "#" + f(0) + f(8) + f(4);
 }
 
 // 1. Seleccionar elementos del DOM que vamos a necesitar
@@ -27,7 +27,7 @@ function generarColorFinal() {
     return { hsl, hex}
 }
 
-// 3. Función para pintar los 5 swatches con colores generados
+// 3. Función para generar y renderizar la paleta de colores
 
 function colorRandom() {
 
@@ -50,7 +50,7 @@ function colorRandom() {
 
         // Crear el swatch
         const swatch = document.createElement("article")
-        swatch.className = "swatch"
+        swatch.className = "swatch";
         swatch.style.backgroundColor = color.hsl;
 
         //Crear la informacion del swatch
@@ -62,17 +62,15 @@ function colorRandom() {
         hex.className = "swatch__hex";
         hex.textContent = color.hex;
 
-        const boton = document.createElement("button");
-        boton.className = "swatch__copy"
-        boton.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184"/>
-        </svg>
-        `;
+        const botonCopy = document.createElement("button");
+        botonCopy.className = "swatch__copy";
+        botonCopy.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184"/>
+        </svg>`;
         
         // Al hacer clic en el ícono de copiar, copiar HEX al portapapeles
 
-        boton.addEventListener("click", function() {
+        botonCopy.addEventListener("click", function() {
             navigator.clipboard.writeText(color.hex);
 
         
@@ -86,7 +84,7 @@ function colorRandom() {
         // Unir los elementos
         
         info.appendChild(hex);
-        info.appendChild(boton);
+        info.appendChild(botonCopy);
 
         swatch.appendChild(info);
 
