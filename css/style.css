@@ -1,179 +1,179 @@
 /* ===== Reset CSS ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ===== Variables css ===== */
 :root {
-    --color-primary: hsl(315, 85%, 55%);
-    --color-primary-light: hsl(315, 85%, 85%);
-    --color-primary-dark: hsl(315, 85%, 25%);
-    --color-accent: hsl(35, 90%, 55%);
-    --color-accent-dark: hsl(35, 90%, 40%);
+  --color-primary: hsl(315, 85%, 55%);
+  --color-primary-light: hsl(315, 85%, 85%);
+  --color-primary-dark: hsl(315, 85%, 25%);
+  --color-accent: hsl(35, 90%, 55%);
+  --color-accent-dark: hsl(35, 90%, 40%);
 
-    --color-background: hsl(0, 30%, 80%);
-    --color-border: hsl(0, 30%, 90%);
-    --color-text: hsl(0, 0%, 15%);
-    --color-text-sauve: hsl(0, 0%, 35%);
+  --color-background: hsl(0, 30%, 80%);
+  --color-border: hsl(0, 30%, 90%);
+  --color-text: hsl(0, 0%, 15%);
+  --color-text-sauve: hsl(0, 0%, 35%);
 }
 
 /* ==== Base CSS ==== */
 
 body {
-    font-family: "Bangers", sans-serif;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: "Bangers", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-    font-size: 4rem;
-    text-align: center;
-    text-shadow: 0 2px 4px var(--color-text-);
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 0 2px 4px var(--color-text-);
 }
 
 /* ==== Layout: header ==== */
 
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    background-color: var(--color-primary-dark);
-    box-shadow: 0 4px 12px hsl(0, 0%, 0%, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px hsl(0, 0%, 0%, 0.3);
 }
 
 .nav__logo {
-    font-size: 3rem;
-    color: var(--color-primary-light);
+  font-size: 3rem;
+  color: var(--color-primary-light);
 }
 
 .nav__links {
-    display: flex;
-    font-size: 1.5rem;
-    gap: 1.5rem;
-    list-style: none;
+  display: flex;
+  font-size: 1.5rem;
+  gap: 1.5rem;
+  list-style: none;
 }
 
 .nav__link {
-    text-decoration: none;
-    color: var(--color-accent);
-    transition: color 0.2s;
+  text-decoration: none;
+  color: var(--color-accent);
+  transition: color 0.2s;
 }
 
 .nav__link:hover {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
-
 
 /* ==== layout: main ==== */
 
 main {
-    flex:1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 #generador {
-    flex:1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ==== layout: swatches ==== */
 
 .swatches {
-    flex: 1;
-    display: grid;
-    grid-template-rows: 1fr;
-    gap: 0;
-    background-color: var(--color-background);
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 0;
+  background-color: var(--color-background);
 }
 
 /* ==== layout: swatch ==== */
 
 .swatch {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    overflow: hidden;
-    background-color: var(--color-primary);
-    transition: transform 0.2s;
-    padding: 2rem 1rem;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  transition: transform 0.2s;
+  padding: 2rem 1rem;
+  gap: 0.5rem;
 }
 
 .swatch:hover {
-    transform: translateY(-20px)
+  transform: translateY(-20px);
 }
 
 .swatch__info {
-    text-align: center;
+  text-align: center;
 }
 
 .swatch__hex {
-    color: hsl(0, 0%, 5%);
-    text-shadow: 0 4px 8px hsl(0, 0%, 50%);
-    font-size: 1.8rem;
+  color: hsl(0, 0%, 5%);
+  text-shadow: 0 4px 8px hsl(0, 0%, 50%);
+  font-size: 1.8rem;
 }
 
 .swatch__copy {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .swatch__copy svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: hsl(0, 0%, 5%);
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: hsl(0, 0%, 5%);
+  opacity: 0;
+  transform: scale(0.8);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .swatch:hover .swatch__copy svg {
-    opacity: 1;
-    transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* ==== Layout: button palette ==== */
 
 .controls {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: none;
 }
 
 .boton_paleta {
-    flex: 1;
-    background: none;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-    padding: 0.8rem;
-    background-color: var(--color-accent);
-    transition: 0.2s;
-    font-size: 2rem;
-    color: var(--color-border);
-    text-shadow: 0 2px 6px var(--color-text-sauve);
-    font-family: "Bangers", sans-serif;
+  flex: 1;
+  background: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.8rem;
+  background-color: var(--color-accent);
+  transition: 0.2s;
+  font-size: 2rem;
+  color: var(--color-border);
+  text-shadow: 0 2px 6px var(--color-text-sauve);
+  font-family: "Bangers", sans-serif;
 }
 
 .boton_paleta:hover {
-    background-color: var(--color-accent-dark);
+  background-color: var(--color-accent-dark);
 }
-
 
 /* ===== Layout: footer ===== */
 footer {
-    padding: 1.5rem;
-    text-align: center;
-    color: var(--color-text-sauve);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--color-text-sauve);
 }

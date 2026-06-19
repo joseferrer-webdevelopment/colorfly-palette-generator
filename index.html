@@ -1,61 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ColorFly</title>
 
     <!-- Enlace a Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Enlace archivo CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <!-- Header con navegación -->
     <header>
-        <nav class="nav">
-            <span class="nav__logo">ColorFly</span>
-            <ul class="nav__links">
-                <li><a class="nav__link" href="#generador">Generador</a></li>
-                <li><a class="nav__link" href="#miscolores">Mis colores</a></li>
-            </ul>
-        </nav>
+      <nav class="nav">
+        <span class="nav__logo">ColorFly</span>
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#generador">Generador</a></li>
+          <li><a class="nav__link" href="#miscolores">Mis colores</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Navegación principal -->
-    
 
     <!-- Contenido principal -->
     <main>
-        <!-- Generador de colores -->
-        <section id="generador">
-            <h1>Paleta de Colores</h1>
-            <section class="swatches" id="swatches"></section>
-            <div class="controls">
-                <button class="boton_paleta" id="boton_paleta">Generar Paleta</button>
-                <label class="control__label" for="cantidad">Cantidad de colores</label>
-                <select class="select" id="cantidad">
-                    <option value="6">6 colores</option>
-                    <option value="8">8 colores</option>
-                    <option value="9">9 colores</option>
-                </select>
-            </div>
-        </section>
+      <!-- Generador de colores -->
+      <section id="generador">
+        <h1>Paleta de Colores</h1>
+        <section class="swatches" id="swatches"></section>
+        <div class="controls">
+          <button class="boton_paleta" id="boton_paleta">Generar Paleta</button>
+          <label class="control__label" for="cantidad"
+            >Cantidad de colores</label
+          >
+          <select class="select" id="cantidad">
+            <option value="6">6 colores</option>
+            <option value="8">8 colores</option>
+            <option value="9">9 colores</option>
+          </select>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>ColorFly &copy; 2026. Todos los derechos reservados.</p>
+      <p>ColorFly &copy; 2026. Todos los derechos reservados.</p>
     </footer>
-</body>
+  </body>
 
-<!-- Enlace archivo JavaScript -->
+  <!-- Enlace archivo JavaScript -->
 
-<script src="./script/script.js"></script>
+  <script src="./script/script.js"></script>
 </html>
