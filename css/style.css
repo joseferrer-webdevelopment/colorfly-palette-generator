@@ -240,7 +240,7 @@ footer {
   }
 
   .control__label {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .control__group {
@@ -279,6 +279,10 @@ footer {
   .select {
     font-size: 1rem;
     padding: 0.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
   }
   /* Fuerza altura exacta para evitar el bug de 100vh en Safari iOS */
   body {
