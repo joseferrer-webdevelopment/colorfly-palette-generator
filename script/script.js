@@ -31,7 +31,8 @@ function generarColorFinal(matricesUsados) {
   } while (
     matricesUsados.some(function (usado) {
       return Math.abs(h - usado) < distanciaMinima;
-    }) && intentos < 20
+    }) &&
+    intentos < 20
   );
 
   const hsl = "hsl(" + h + ", 70%, 60%)";
